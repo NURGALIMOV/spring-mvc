@@ -1,0 +1,77 @@
+###
+GET http://localhost:8080/walls/1/posts
+
+###
+GET http://localhost:8080/walls/1/posts/1
+
+###
+POST http://localhost:8080/walls/1/posts
+Content-Type: application/json
+
+[
+  {
+    "id": null,
+    "author": null,
+    "content": "content",
+    "attachment": "attachment",
+    "created": null
+  }
+]
+
+###
+PUT http://localhost:8080/walls/1/posts/4
+Content-Type: application/json
+
+{
+  "id": null,
+  "author": null,
+  "content": "content-content4",
+  "attachment": "attachment-attachment4",
+  "created": null
+}
+
+###
+PUT http://localhost:8080/walls/1/posts
+Content-Type: application/json
+
+[
+  {
+    "id": 3,
+    "author": null,
+    "content": "9",
+    "attachment": "9",
+    "created": null
+  },
+  {
+    "id": 4,
+    "author": null,
+    "content": "8",
+    "attachment": "8",
+    "created": null
+  }
+]
+
+###
+DELETE http://localhost:8080/walls/1/posts/4
+Content-Type: application/json
+
+###
+DELETE http://localhost:8080/walls/1/posts
+Content-Type: application/json
+
+[
+  {
+    "id": 3,
+    "author": null,
+    "content": "9",
+    "attachment": "9",
+    "created": null
+  },
+  {
+    "id": 1,
+    "author": null,
+    "content": "8",
+    "attachment": "8",
+    "created": null
+  }
+]
