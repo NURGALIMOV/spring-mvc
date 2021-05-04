@@ -9,11 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Push to GitHub Packages
-      uses: docker/build-push-action@v1
-      with:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GHCR_TOKEN }}
-        registry: ghcr.io
-        repository: nurgalimov/spring-mvc
-        tag_with_ref: true
+    - name: Build project
+      env:
+        SERVER_USERNAME: il.nur86
+      run: echo ${env.SERVER_USERNAME}
